@@ -1,0 +1,50 @@
+/* GENERAL
+************************************/
+body {
+  background: #f2ebe1;
+}
+
+/* NAVIGATION
+************************************/
+.navbar {
+  background: #441712;
+}
+
+
+/* MAIN CONTENT
+************************************/
+#main-content {
+  background: #f2ebe1;
+}
+
+#title-area {
+  width: 25em;
+}
+
+#language-btn {
+  width: 8em;
+}
+
+.snippet-area {
+  height: 100%
+}
+
+#sidebar_ul li{
+  border: 1px solid #333;
+}
+
+#snip_link {
+  width: 70%;
+}
+
+button {
+  padding: 0.5em 0.5em;
+  margin: 1.4em 1.0em 0em;
+}
+
+textarea {
+  background: #f2ebe1;
+  min-height: 550px;
+  min-width: 100%;
+}
+
