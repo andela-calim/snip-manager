@@ -43,13 +43,12 @@ angular.module('snipControllers', [])
       Landing.addSnippet(formData);
         
     } else {
-      console.log('local storage is not supported!');
+      alert('local storage is not supported!');
     }
   }
 
   $scope.snippet_load = function(snipID) {
     if(snipID) {
-      console.log('in snippet_load', snipID);
       var theSnip = Landing.loadSnippet(snipID);
 
       $('ul.nav-sidebar li').removeClass('active');
@@ -65,7 +64,6 @@ angular.module('snipControllers', [])
   }
 
   $scope.snippet_delete = function(snipID) {
-    console.log('snipID', snipID)
     if(snipID) {
       Landing.deleteSnippet(snipID);
     }
