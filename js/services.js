@@ -13,7 +13,6 @@ angular.module('snipServices', [])
 
     addSnippet: function(snippet) {
       if(snippet.sid) {
-        console.log(snippet.sid);
         for(var snipIndex in storageContainer) {
           var snip = storageContainer[snipIndex];
           if(snip.sid == snippet.sid) {
@@ -37,7 +36,6 @@ angular.module('snipServices', [])
     },
 
     loadSnippet: function(snipID) {
-      console.log('in loadSnippet', snipID);
       for(var snip in storageContainer) {
         var theSnip = storageContainer[snip];
         if(theSnip.sid === snipID) {
