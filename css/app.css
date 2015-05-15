@@ -21,6 +21,10 @@ body {
   width: 25em;
 }
 
+#lang_dropdown {
+  margin-bottom: 20px;
+}
+
 #language-btn {
   width: 8em;
 }
