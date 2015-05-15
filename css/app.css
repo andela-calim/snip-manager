@@ -40,6 +40,9 @@ body {
 button {
   padding: 0.5em 0.5em;
   margin: 1.4em 1.0em 0em;
+  background: brown;
+  border: none;
+  color: #fff;
 }
 
 textarea {
