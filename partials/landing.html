@@ -1,0 +1,49 @@
+<div ui-view="nav"></div>
+
+<div class="container-fluid">
+  <div class="row">
+    <!-- Side Navigation -->
+    <div class="col-sm-3 col-md-3 sidebar">
+      <ul class="nav nav-sidebar">
+        <li id="{{snippet.sid}}" ng-repeat="snippet in allSnippets" class="">
+          <a id="snip_link" href="#" data="{{snippet.sid}}" ng-click="snippet_load(snippet.sid)" class="pull-left"><strong>{{snippet.title}}</strong>
+            <span class="sr-only">(current)</span>
+            <p class="language">{{snippet.language}}</p>
+          </a>
+          
+          <button data="{{snippet.sid}}" ng-click="snippet_delete(snippet.sid)" class="pull-right"><strong>X</strong></button>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content" class="col-sm-9 col-sm-offset-3 col-md-9 col-md-offset-3 main">     
+      <form name="snippetForm" class="navbar-form" ng-submit="submit()">
+        <div class="page-header">
+          <div class="form-group">
+            <input id="title-area" type="text" class="form-control" placeholder="Snippet Title" ng-model="snippet_title">
+            <div class="btn-group">
+              <button id="language-btn" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false" ng-model="snippet_language">
+                Language <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#" ng-click="slanguage('html')">HTML</a></li>
+                <li><a href="#" ng-click="slanguage('css')">CSS</a></li>
+                <li><a href="#" ng-click="slanguage('javascript')">JavaScript</a></li>
+                <li><a href="#" ng-click="slanguage('ruby')">Ruby</a></li>
+                <li><a href="#" ng-click="slanguage('python')">Python</a></li>
+                <li class="divider"></li>
+                <li><a href="#" ng-click="slanguage('notListed')">Not listed</a></li>
+              </ul>
+            </div>  
+          </div> <!-- closes form-group -->
+        </div> <!-- closes page-header -->
+        <div class="snippet-area">
+          <textarea type="text" class="form-control" placeholder="Snippet body" ng-model="snippet_body"></textarea>
+        </div>
+        <button type="submit" class="btn btn-default pull-right">Submit</button>
+      </form>
+    </div> <!-- end of main content -->
+
+  </div>
+</div>
